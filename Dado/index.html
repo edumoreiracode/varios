@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tirar Dados</title>
+</head>
+<body>
+  <main>
+    <div id="contenedor">1</div>
+    <button onclick="tirarDados()">Tirar</button>
+  </main>
+
+  <script>
+
+    tirarDados = ()=> {
+      let contenido = document.getElementById("contenedor");
+
+      // Inicia el interval
+      // Multiplico el valor ramdom por 5 y le sumo 1 para evitar el valor 0.
+      timerId = setInterval(()=>{contenido.textContent = Math.round(Math.random() * 5 + 1);}, 100);
+      
+      // Detiene el interval despues de los segundos especificados en el timeout
+      setTimeout(() => { clearInterval(timerId); }, 3000);
+    }
+    
+  </script>
+</body>
+</html>

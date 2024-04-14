@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego</title>
+  <style>
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <h1>Game</h1>
+    </header>
+
+    <main class="main-container">
+      <canvas width="600" height="400"></canvas>
+    </main>
+
+    <script>
+      const pantalla = document.querySelector("canvas");
+      const pincel = pantalla.getContext("2d");
+      let x = 50;
+      let y = 100;
+      let w = 50;
+      let h = 100;
+      let v = 20;
+
+      pincel.fillStyle = "#00000020";
+      pincel.fillRect(0,0,600,400);
+
+      pincel.fillStyle = "#00000050";
+      pincel.fillRect(x,y,w,h);
+
+      document.onkeydown = function(event) {
+			// if (event.keyCode === 37) { // flecha izquierda
+			// 	// mover la imagen hacia la izquierda
+      //   x-=v;
+			// 	pincel.clearRect(0,0,600,400);
+      //   pincel.fillRect(x,y,w,h);
+			// } else if (event.keyCode === 39) { // flecha derecha
+			// 	// mover la imagen hacia la derecha
+      //   x+=v;
+			// 	pincel.clearRect(0,0,600,400);
+      //   pincel.fillRect(x,y,w,h);
+			// }
+
+      switch(event.keyCode) {
+        case 37: // Izquierda
+          x-=v;
+          pincel.clearRect(0,0,600,400);
+          pincel.fillRect(x,y,w,h);
+        break;
+        case 39: // Derecha
+          x+=v;
+          pincel.clearRect(0,0,600,400);
+          pincel.fillRect(x,y,w,h);
+        break;
+        case 38: // Arriba
+          y-=v;
+          pincel.clearRect(0,0,600,400);
+          pincel.fillRect(x,y,w,h);
+        break;
+        case 40: // Abajo
+          y+=v;
+          pincel.clearRect(0,0,600,400);
+          pincel.fillRect(x,y,w,h);
+        break;
+      }
+
+      pincel.fillStyle = "#00000020";
+      pincel.fillRect(0,0,600,400);
+		};
+    </script>
+</body>
+</html>

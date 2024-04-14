@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #game {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button[data-color="red"] {
+  background-color: red;
+}
+
+.button[data-color="green"] {
+  background-color: green;
+}
+
+.button[data-color="blue"] {
+  background-color: blue;
+}
+
+.button[data-color="yellow"] {
+  background-color: yellow;
+}
+
+#score {
+  font-size: 32px;
+  margin: 10px;
+}
+
+#start {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: 2px solid #999;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#start:hover {
+  background-color: #eee;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div id="game">
+    <div class="button" data-color="red"></div>
+    <div class="button" data-color="green"></div>
+    <div class="button" data-color="blue"></div>
+    <div class="button" data-color="yellow"></div>
+    <div id="score">0</div>
+    <div id="start">Start</div>
+  </div>
+  
+  
+  
+  
+  <script>
+    const buttons = document.querySelectorAll('.btn');
+const message = document.querySelector('#message');
+
+let sequence = []; // Array
+
+  </script>
+  
+</body>
+</html>

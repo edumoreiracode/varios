@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="240" height="240"></canvas>
+
+  <script>
+    dibujarCuadrados = (x, y, cant, color, direc)=>{
+      let x1 = x;
+      let y1 = y;
+
+      for(let i=0; i<cant; i++){
+        pincel.fillStyle = color;
+        pincel.fillRect(x1, y1, 10, 10);
+
+        switch(direc){
+          case "up":
+            y1 -= 10;
+          break;
+          case "down":
+            y1 += 10;
+          break;
+          case "left":
+            x1 -= 10;
+          break;
+          case "right":
+            x1 += 10;
+          break;
+        }
+      }
+    }
+
+    let pantalla = document.querySelector("canvas");
+    let pincel = pantalla.getContext("2d");
+
+    // Mario Colores
+    let colorPiel = "#F9AB01";
+    let colorPelo = "green";
+    let colorRemera = "green";
+    let colorZapatos = "green";
+    let colorOjos = "green";
+    let colorBigote = "green";
+    let colorGorro = "red";
+    let colorJardinero = "red";
+
+    // Background
+    pincel.fillStyle = "whiteSmoke";
+    pincel.fillRect(0, 0, 240, 240);
+
+
+    // Cabeza
+    dibujarCuadrados(60, 40, 5, colorGorro, "right");
+
+    dibujarCuadrados(50, 50, 8, colorGorro, "right");
+
+    dibujarCuadrados(50, 60, 3, colorPelo, "right");
+    dibujarCuadrados(80, 60, 2, colorPiel, "right");
+    dibujarCuadrados(100, 60, 1, colorOjos, "right");
+    dibujarCuadrados(110, 60, 1, colorPiel, "right");
+
+    dibujarCuadrados(40, 70, 1, colorPelo, "right");
+    dibujarCuadrados(50, 70, 1, colorPiel, "right");
+    dibujarCuadrados(60, 70, 1, colorPelo, "right");
+    dibujarCuadrados(70, 70, 3, colorPiel, "right");
+    dibujarCuadrados(100, 70, 1, colorOjos, "right");
+    dibujarCuadrados(110, 70, 3, colorPiel, "right");
+
+    dibujarCuadrados(40, 80, 1, colorPelo, "right");
+    dibujarCuadrados(50, 80, 1, colorPiel, "right");
+    dibujarCuadrados(60, 80, 2, colorPelo, "right");
+    dibujarCuadrados(80, 80, 3, colorPiel, "right");
+    dibujarCuadrados(110, 80, 1, colorBigote, "right");
+    dibujarCuadrados(120, 80, 3, colorPiel, "right");
+
+    dibujarCuadrados(40, 90, 2, colorPelo, "right");
+    dibujarCuadrados(60, 90, 4, colorPiel, "right");
+    dibujarCuadrados(100, 90, 4, colorBigote, "right");
+
+    dibujarCuadrados(60, 100, 7, colorPiel, "right");
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

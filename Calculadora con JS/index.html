@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Main Style -->
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Calculadora con JavaScript</title>
+</head>
+<body class="flex">
+
+  <div class="mainContainer flex">
+    <div class="nameContainer">Eduardo Moreira - 2022</div>
+    <div class="displayContainer" id="pantalla"></div>
+    <div class="buttonsContainer">
+      <button type="button" id="Raíz" onclick="">√</button> <!-- Falta llamar a la funcion -->
+      <button type="button" id="Potencia" onclick="">x²</button> <!-- Falta llamar a la funcion -->
+      <button type="button" id="Porcentaje" onclick="">%</button> <!-- Falta llamar a la funcion -->
+      <button type="button" id="División" onclick="seleccionarOperacion('/')">÷</button>
+      <button type="button" id="nro7" onclick="mostrar_en_pantalla(7)">7</button>
+      <button type="button" id="nro8" onclick="mostrar_en_pantalla(8)">8</button>
+      <button type="button" id="nro9" onclick="mostrar_en_pantalla(9)">9</button>
+      <button type="button" id="producto" onclick="seleccionarOperacion('*')">×</button>
+      <button type="button" id="nro4" onclick="mostrar_en_pantalla(4)">4</button>
+      <button type="button" id="nro5" onclick="mostrar_en_pantalla(5)">5</button>
+      <button type="button" id="nro6" onclick="mostrar_en_pantalla(6)">6</button>
+      <button type="button" id="Resta" onclick="seleccionarOperacion('-')">-</button>
+      <button type="button" id="nro1" onclick="mostrar_en_pantalla(1)">1</button>
+      <button type="button" id="nro2" onclick="mostrar_en_pantalla(2)">2</button>
+      <button type="button" id="nro3" onclick="mostrar_en_pantalla(3)">3</button>
+      <button type="button" id="suma" onclick="seleccionarOperacion('+')">+</button>
+      <button type="button" id="nro0" onclick="mostrar_en_pantalla(0)">0</button>
+      <button type="button" id="punto" onclick="mostrar_en_pantalla('.')">.</button>
+      <button type="button" id="borrar" onclick="delete_display()">⌫</button> 
+      <button type="button" id="Resultado" onclick="calcularOperacion()">=</button> <!-- Falta llamar a la funcion -->
+    </div>
+    
+  </div>
+  <!-- Main Script -->
+  <script src="./js/script.js"></script>
+</body>
+</html>
